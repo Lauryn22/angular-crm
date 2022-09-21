@@ -1,0 +1,68 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrap {
+  height: 100vh;
+  display: flex;
+  background: rgba(246, 240, 240, 0.789);
+  flex-direction: column;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background: #fff;
+}
+
+.header p {
+  text-align: center;
+  line-height: 80px;
+  font-size: 2em;
+}
+
+.main {
+  display: flex;
+  height: calc(100% - 80px);
+}
+
+nav {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 15%;
+background: #525252;;
+height: 100%;
+}
+nav p {
+  color: rgb(228, 219, 219);
+  font-size: 2em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.content{
+  height: 1000px;
+  width: 100%;
+
+}
+
+footer {
+  height: 120px;
+  width: 100%;
+  background: #fff;
+
+
+}
+
+
+
+
+
