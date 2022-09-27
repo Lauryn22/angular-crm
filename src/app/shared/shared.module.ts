@@ -6,6 +6,7 @@ import { BtnComponent } from './component/btn/btn.component';
 import { RouterModule } from '@angular/router';
 import { TableLightComponent } from './table-light/table-light.component';
 import { TotalPipe } from './pipes/total.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,6 +19,13 @@ import { TotalPipe } from './pipes/total.pipe';
   imports: [
     CommonModule, RouterModule,
   ],
-  exports: [TemplatesModule, IconsModule, BtnComponent, TableLightComponent, TotalPipe],
+  exports: [
+    TemplatesModule,
+    IconsModule,
+    BtnComponent,
+    TableLightComponent,
+    TotalPipe,
+    ReactiveFormsModule,
+  ],
 })
 export class SharedModule { }
