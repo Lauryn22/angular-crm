@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from 'src/app/core/models/order';
 
 @Component({
   selector: 'app-page-add-order',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageAddOrderComponent implements OnInit {
 
-  constructor() { }
+  public order: Order;
+
+  constructor() {
+    this.order = new Order();
+  }
 
   ngOnInit(): void {
   }
