@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../services/orders.service';
 import { Observable } from 'rxjs';
+import { StateOrder } from 'src/app/core/enums/state-order';
 
 @Component({
   selector: 'app-page-list-orders',
@@ -12,6 +13,7 @@ export class PageListOrdersComponent implements OnInit {
   public title: string;
   public route: string;
   public label: string;
+  public states: string[];
   public collection$: Observable<Order[]>;
   public collection!: Order[];
   public headers: string[];
@@ -20,6 +22,7 @@ export class PageListOrdersComponent implements OnInit {
     this.title = 'list of orders';
     this.route = 'add';
     this.label = 'add order';
+    this.states = Object.values(StateOrder);
     this.collection$ = this.ordersService.collection$;
     this.headers = [
       'Type',
@@ -36,6 +39,13 @@ export class PageListOrdersComponent implements OnInit {
 
   public changeTitle(): void {
     this.title = 'title changed';
+  }
+
+  public changeState(item: Order, event: any) {
+    const state = event.target.value;
+    this.ordersService.changeState(item, state).subscribe((data) => {
+      Object.assign(item, data);
+    });
   }
 
   // public total(val: number, coef: number, tva?: number): number {
