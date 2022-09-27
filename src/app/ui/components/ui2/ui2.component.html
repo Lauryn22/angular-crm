@@ -9,12 +9,17 @@
 <body>
 
     <div id="wrap">
-      <div class="header"><p>Header</p></div>
+      <div class="header">
+        <ng-content select=".tr-header"></ng-content>
+
+      </div>
       <div class="main">
-        <nav><p>Navbar</p></nav>
+        <nav class="nav"><ng-content select=".tr-nav"></ng-content></nav>
         <section>
-          <div class="content"><p>Content</p></div>
-          <footer><p>Footer</p></footer>
+          <div class="content">
+            <p>Content</p>
+          </div>
+          <footer class="footer"><ng-content select=".tr-footer"></ng-content></footer>
         </section>
       </div>
     </div>

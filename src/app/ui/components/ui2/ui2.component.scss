@@ -28,7 +28,7 @@
   height: calc(100% - 80px);
 }
 
-nav {
+.nav {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -36,8 +36,8 @@ width: 15%;
 background: #525252;;
 height: 100%;
 }
-nav p {
-  color: rgb(228, 219, 219);
+.nav p {
+  color: #fff;
   font-size: 2em;
 }
 
@@ -54,7 +54,7 @@ section {
 
 }
 
-footer {
+.footer {
   height: 120px;
   width: 100%;
   background: #fff;

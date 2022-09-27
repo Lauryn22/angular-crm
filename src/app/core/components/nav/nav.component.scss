@@ -1,0 +1,32 @@
+.navigation {
+  width: 180px;
+  height: 85px;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+.navigation ul li {
+  list-style: none;
+  border: 1px solid #525252;
+  text-align: center;
+  padding: 6px
+}
+
+.navigation ul li a {
+  color: rgb(104, 104, 204);
+  text-decoration: none;
+}
+
+.navigation ul li:hover {
+  background: #222;
+  color: #fff;
+}
+.active{
+  background: var(--app-light);
+}
